@@ -1,3 +1,13 @@
+$search-bar-background-color: #dadada;
+$search-bar-height: 2.5em;
+$search-bar-border: none;
+
+.search-bar {
+    background-color: #dadada;
+    height: 2.5em;
+    border: none;
+}
+
 .header {
     max-width: 100%;
     box-shadow: 5px 5px 20px gray;
@@ -11,15 +21,23 @@
 }
 
 .search-box {
-    width: 90%;
-    height: 2.5em;
+    width: 75%;
+    height: $search-bar-height;
     display: inline-block;
-    border: none;
+    border: $search-bar-border;
 }
 
 .search-button {
     width: 10%;
-    height: 2.5em;
-    border: none;
-    background-color: #dadada;
+    height: $search-bar-height;
+    border: $search-bar-border;
+    background-color: $search-bar-background-color;
+}
+
+.dropdown {
+    width: 15%;
+    height: $search-bar-height;
+    border: $search-bar-border;
+    background-color: $search-bar-background-color;
+    font-weight: 600;
 }
