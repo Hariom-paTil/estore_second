@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from "./header/header.component";
+import { HeaderComponent } from "./home/componets/header/header.component";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { CatnavigationComponent } from "./catnavigation/catnavigation.component";
+import { CatnavigationComponent } from "./home/componets/catnavigation/catnavigation.component";
 @Component({
   selector: 'app-root',
   standalone: true,
