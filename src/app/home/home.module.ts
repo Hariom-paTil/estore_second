@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './componets/header/header.component';
 import { CatnavigationComponent } from './componets/catnavigation/catnavigation.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SidenavgationbarComponent } from './componets/sidenavgationbar/sidenavgationbar.component';
 
 
 
@@ -12,7 +13,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CommonModule,
     HeaderComponent,
     CatnavigationComponent,
-    FontAwesomeModule
+    FontAwesomeModule,SidenavgationbarComponent
   ]
 })
 export class HomeModule { }

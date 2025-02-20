@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from "./home/componets/header/header.component";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { CatnavigationComponent } from "./home/componets/catnavigation/catnavigation.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, HeaderComponent, FontAwesomeModule, CatnavigationComponent],
+  imports: [RouterOutlet, FontAwesomeModule,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
