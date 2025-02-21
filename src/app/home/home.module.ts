@@ -4,6 +4,7 @@ import { HeaderComponent } from './componets/header/header.component';
 import { CatnavigationComponent } from './componets/catnavigation/catnavigation.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SidenavgationbarComponent } from './componets/sidenavgationbar/sidenavgationbar.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -13,7 +14,7 @@ import { SidenavgationbarComponent } from './componets/sidenavgationbar/sidenavg
     CommonModule,
     HeaderComponent,
     CatnavigationComponent,
-    FontAwesomeModule,SidenavgationbarComponent
+    FontAwesomeModule,SidenavgationbarComponent,SharedModule
   ]
 })
 export class HomeModule { }

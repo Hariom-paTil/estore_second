@@ -3,6 +3,7 @@ import { HeaderComponent } from "./componets/header/header.component";
 import { CatnavigationComponent } from "./componets/catnavigation/catnavigation.component";
 import { SidenavgationbarComponent } from "./componets/sidenavgationbar/sidenavgationbar.component";
 import { ProductsComponent } from "./componets/products/products.component";
+import { RatingsComponent } from '../shared/componets/ratings/ratings.component';
 
 @Component({
   selector: 'app-home',
