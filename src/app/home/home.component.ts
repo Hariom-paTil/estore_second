@@ -4,6 +4,7 @@ import { CatnavigationComponent } from "./componets/catnavigation/catnavigation.
 import { SidenavgationbarComponent } from "./componets/sidenavgationbar/sidenavgationbar.component";
 import { ProductsComponent } from "./componets/products/products.component";
 import { RatingsComponent } from '../shared/componets/ratings/ratings.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
