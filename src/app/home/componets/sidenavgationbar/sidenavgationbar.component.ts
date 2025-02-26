@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { Category } from '../../types/category.type';
 import { CategoryService } from '../../services/category.service';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Subscription } from 'rxjs';
+import { CategoriesStoreItem } from '../../services/categoryStoreItem';
+
 
 @Component({
   selector: 'app-sidenavgationbar',
@@ -11,14 +14,16 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   templateUrl: './sidenavgationbar.component.html',
   styleUrl: './sidenavgationbar.component.scss'
 })
-export class SidenavgationbarComponent {
+export class SidenavgationbarComponent implements OnDestroy {
   categories: Category[] = [];
-  
-  constructor(categoryService: CategoryService) {
-    categoryService.getAllCategories().subscribe((categories) => {
-      this.categories = categories;
-      console.log(categories);
-    });
+  subscriptions: Subscription = new Subscription();
+
+  constructor(categoryStore: CategoriesStoreItem) {
+    this.subscriptions.add(
+      categoryStore.categories$.subscribe((categories) => {
+        this.categories = categories;
+      })
+    );
   }
 
   getCategories(parentCategoryId?: number): Category[] {
@@ -27,5 +32,9 @@ export class SidenavgationbarComponent {
         ? category.parent_category_id === parentCategoryId
         : category.parent_category_id === null
     );
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe();
   }
 }

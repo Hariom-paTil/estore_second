@@ -5,6 +5,7 @@ import { SidenavgationbarComponent } from "./componets/sidenavgationbar/sidenavg
 import { ProductsComponent } from "./componets/products/products.component";
 import { RatingsComponent } from '../shared/componets/ratings/ratings.component';
 import { HttpClient } from '@angular/common/http';
+import { CategoriesStoreItem } from './services/categoryStoreItem';
 
 @Component({
   selector: 'app-home',
@@ -14,5 +15,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
+  constructor(private categoriesStoreItem: CategoriesStoreItem) {
+    this.categoriesStoreItem.loadCategories();
+  }
 }
