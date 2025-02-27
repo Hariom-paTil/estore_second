@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, Output } from '@angular/core';
 import { Category } from '../../types/category.type';
 import { CategoryService } from '../../services/category.service';
 import { CommonModule } from '@angular/common';
@@ -15,6 +15,8 @@ import { CategoriesStoreItem } from '../../services/categoryStoreItem';
   styleUrl: './sidenavgationbar.component.scss'
 })
 export class SidenavgationbarComponent implements OnDestroy {
+  @Output()
+  subCategoryClicked: EventEmitter<number> = new EventEmitter<number>();
   categories: Category[] = [];
   subscriptions: Subscription = new Subscription();
 
@@ -32,6 +34,10 @@ export class SidenavgationbarComponent implements OnDestroy {
         ? category.parent_category_id === parentCategoryId
         : category.parent_category_id === null
     );
+  }
+
+  onSubCategoryClick(subCategory: Category): void {
+    this.subCategoryClicked.emit(subCategory.id);
   }
 
   ngOnDestroy(): void {

@@ -14,10 +14,9 @@ import { ProductsService } from './componets/products/products.service';
 
 
 @NgModule({
-  declarations: [ 
-    HeaderComponent,
-    CatnavigationComponent,SidenavgationbarComponent,SharedModule,FontAwesomeModule],
-  imports: [CommonModule,FontAwesomeModule],
+  declarations: [],
+  imports: [CommonModule,FontAwesomeModule,HeaderComponent,
+    CatnavigationComponent,SidenavgationbarComponent,SharedModule],
   providers :[CategoryService,CategoriesStoreItem,ProductsStoreItem,ProductsService]
 })
 export class HomeModule { }
