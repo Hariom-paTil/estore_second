@@ -6,6 +6,7 @@ import { ProductsComponent } from "./componets/products/products.component";
 import { RatingsComponent } from '../shared/componets/ratings/ratings.component';
 import { HttpClient } from '@angular/common/http';
 import { CategoriesStoreItem } from './services/categoryStoreItem';
+import { ProductsStoreItem } from './services/product/productstoreitem';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,11 @@ import { CategoriesStoreItem } from './services/categoryStoreItem';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  constructor(private categoriesStoreItem: CategoriesStoreItem) {
+  constructor(
+    private categoriesStoreItem: CategoriesStoreItem,
+    private productsStoreItem: ProductsStoreItem
+  ) {
     this.categoriesStoreItem.loadCategories();
+    this.productsStoreItem.loadProducts();
   }
 }

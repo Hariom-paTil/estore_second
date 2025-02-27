@@ -1,9 +1,10 @@
 
+
+import { Injectable } from '@angular/core';
+import { Observable, map } from 'rxjs';
 import { StoreItem } from '../../shared/Storeitem';
 import { Category } from '../types/category.type';
 import { CategoryService } from './category.service';
-import { Injectable } from '@angular/core';
-import { Observable, map } from 'rxjs';
 
 @Injectable({
     providedIn: 'root' 

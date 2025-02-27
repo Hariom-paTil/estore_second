@@ -3,6 +3,7 @@ import { ProductsService } from './products.service';
 import { Product} from './products.type';
 import { CommonModule } from '@angular/common';
 import { RatingsComponent } from '../../../shared/componets/ratings/ratings.component';
+import { ProductsStoreItem } from '../../services/product/productstoreitem';
 
 @Component({
   selector: 'app-products',
@@ -12,11 +13,5 @@ import { RatingsComponent } from '../../../shared/componets/ratings/ratings.comp
   styleUrl: './products.component.scss'
 })
 export class ProductsComponent {
-  products: Product[] = [];
-
-  constructor(productsService: ProductsService) {
-    productsService
-      .getAllProducts()
-      .subscribe((products) => (this.products = products));
-  }
+  constructor(public productsStore: ProductsStoreItem) {}
 }
