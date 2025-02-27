@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 export class RatingsComponent {
   faStar = faStar;
   faStarHalfStroke = faStarHalfStroke;
-  faStarRegular = faStarRegular;
+  
 
   stars: IconDefinition[] = [];
   private _score: number = 0;
@@ -31,8 +31,6 @@ export class RatingsComponent {
       this.stars.push(faStarHalfStroke);
     }
 
-    for (let i: number = this.stars.length; i < 5; i++) {
-      this.stars.push( faStarRegular);
-    }
+   
   }
 }
