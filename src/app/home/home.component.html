@@ -1,10 +1,10 @@
 <app-header></app-header>
-<app-catnavigation></app-catnavigation>
+<app-catnavigation (categoryClicked)="onSelectCategory($event)" ></app-catnavigation>
 
 <div class="container-fluid">
   <div class="row">
     <div class="col-lg-2 col-md-3 col-sm-4">
-     <app-sidenavgationbar (subCategoryClicked)="onSelectSubCategory($event)"></app-sidenavgationbar>
+      <app-sidenavgationbar (subCategoryClicked)="onSelectSubCategory($event)"></app-sidenavgationbar>
     </div>
     <div class="col-lg-10 col-md-9 col-sm-8">
       <app-products></app-products>
