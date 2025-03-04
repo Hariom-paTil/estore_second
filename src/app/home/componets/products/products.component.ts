@@ -13,5 +13,8 @@ import { ProductsStoreItem } from '../../services/product/productstoreitem';
   styleUrl: './products.component.scss'
 })
 export class ProductsComponent {
-  constructor(public productsStore: ProductsStoreItem) {}
+  constructor(public productsStore: ProductsStoreItem) {
+    console.log(productsStore);
+  }
+  
 }

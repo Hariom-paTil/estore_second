@@ -19,6 +19,11 @@ import { Injectable } from "@angular/core";
     }
   
     get products$(): Observable<Product[]> {
+      console.log(this.value$);
       return this.value$;
+    }
+
+    get products(): Product[] {
+      return this.value;
     }
   }

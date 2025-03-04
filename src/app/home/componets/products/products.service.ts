@@ -15,5 +15,6 @@ export class ProductsService {
       url += '?' + query;
     }
     return this.httpClient.get<Product[]>(url);
+    
   }
 }

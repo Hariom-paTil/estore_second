@@ -7,6 +7,7 @@ import { RatingsComponent } from '../shared/componets/ratings/ratings.component'
 import { HttpClient } from '@angular/common/http';
 import { CategoriesStoreItem } from './services/categoryStoreItem';
 import { ProductsStoreItem } from './services/product/productstoreitem';
+import { SearchKeyword } from './types/searchkeywords';
 
 @Component({
   selector: 'app-home',
@@ -27,7 +28,17 @@ export class HomeComponent {
   onSelectSubCategory(subCategoryId: number): void {
     this.productsStoreItem.loadProducts('subcategoryid=' + subCategoryId);
   }
+
   onSelectCategory(categoryId: number): void {
     this.productsStoreItem.loadProducts('maincategoryid=' + categoryId);
+  }
+
+  onSearchKeyword(searchKeyword: SearchKeyword): void {
+    this.productsStoreItem.loadProducts(
+      'maincategoryid=' +
+        searchKeyword.categoryId +
+        '&keyword=' +
+        searchKeyword.keyword
+    );
   }
 }
