@@ -8,11 +8,12 @@ import { HttpClient } from '@angular/common/http';
 import { CategoriesStoreItem } from './services/categoryStoreItem';
 import { ProductsStoreItem } from './services/product/productstoreitem';
 import { SearchKeyword } from './types/searchkeywords';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, CatnavigationComponent, SidenavgationbarComponent, ProductsComponent],
+  imports: [HeaderComponent, CatnavigationComponent, SidenavgationbarComponent, ProductsComponent,RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -25,9 +26,6 @@ export class HomeComponent {
     this.productsStoreItem.loadProducts();
   }
 
-  onSelectSubCategory(subCategoryId: number): void {
-    this.productsStoreItem.loadProducts('subcategoryid=' + subCategoryId);
-  }
 
   onSelectCategory(categoryId: number): void {
     this.productsStoreItem.loadProducts('maincategoryid=' + categoryId);
