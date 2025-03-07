@@ -4,6 +4,8 @@ import { CategoriesStoreItem } from '../../services/categoryStoreItem';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
 import { SearchKeyword } from '../../types/searchkeywords';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -20,7 +22,19 @@ export class HeaderComponent {
   searchClicked: EventEmitter<SearchKeyword> =
     new EventEmitter<SearchKeyword>();
 
-  constructor(public categoryStore: CategoriesStoreItem) {}
+  displaySearch: boolean = true;
+
+  constructor(
+    public categoryStore: CategoriesStoreItem,
+    private router: Router
+  ) {
+    router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event) => {
+        this.displaySearch =
+          (event as NavigationEnd).url === '/home/products' ? true : false;
+      });
+  }
 
   onClickSearch(keyword: string, categoryId: string): void {
     this.searchClicked.emit({
