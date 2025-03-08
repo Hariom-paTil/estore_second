@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { SearchKeyword } from '../../types/searchkeywords';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import { CartStoreItem } from '../../services/cart/cart.storeitem';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -26,7 +27,8 @@ export class HeaderComponent {
 
   constructor(
     public categoryStore: CategoriesStoreItem,
-    private router: Router
+    private router: Router,
+    public cartStore: CartStoreItem
   ) {
     router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
@@ -34,6 +36,7 @@ export class HeaderComponent {
         this.displaySearch =
           (event as NavigationEnd).url === '/home/products' ? true : false;
       });
+    
   }
 
   onClickSearch(keyword: string, categoryId: string): void {
