@@ -13,13 +13,14 @@ import { ProductsService } from './componets/products/products.service';
 import { RouterModule } from '@angular/router';
 import { HomeRoutingModule } from './home_route_module';
 import { CartStoreItem } from './services/cart/cart.storeitem';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [],
   imports: [CommonModule,FontAwesomeModule,HeaderComponent,
-    CatnavigationComponent,SidenavgationbarComponent,SharedModule,RouterModule,HomeRoutingModule],
+    CatnavigationComponent,SidenavgationbarComponent,SharedModule,RouterModule,HomeRoutingModule,ReactiveFormsModule],
   providers :[CategoryService,CategoriesStoreItem,ProductsStoreItem,ProductsService,CartStoreItem]
 })
 export class HomeModule { }
