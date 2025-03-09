@@ -1,8 +1,8 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnDestroy, OnInit } from '@angular/core';
-import { Product } from '../../componets/products/products.type';
+import { Product } from '../products/products.type';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
-import { ProductsService } from '../../componets/products/products.service';
+import { ProductsService } from '../products/products.service';
 import { RatingsComponent } from "../../../shared/componets/ratings/ratings.component";
 import { ProductsStoreItem } from '../../services/product/productstoreitem';
 import { StoreItem } from '../../../shared/Storeitem';

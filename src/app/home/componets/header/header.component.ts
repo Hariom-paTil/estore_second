@@ -4,13 +4,13 @@ import { CategoriesStoreItem } from '../../services/categoryStoreItem';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
 import { SearchKeyword } from '../../types/searchkeywords';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { filter } from 'rxjs';
 import { CartStoreItem } from '../../services/cart/cart.storeitem';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [FontAwesomeModule,CommonModule],
+  imports: [FontAwesomeModule,CommonModule,RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
