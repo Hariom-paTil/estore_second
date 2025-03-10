@@ -134,5 +134,18 @@
         Join
       </button>
     </div>
+    <div
+      class="alert"
+      [ngClass]="
+        alertType === 0
+          ? 'alert-success'
+          : alertType === 1
+          ? 'alert-warning'
+          : 'alert-danger'
+      "
+      *ngIf="alertMessage !== ''"
+    >
+      {{ alertMessage }}
+    </div>
   </form>
 </div>
