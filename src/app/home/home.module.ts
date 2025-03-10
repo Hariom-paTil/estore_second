@@ -14,6 +14,7 @@ import { RouterModule } from '@angular/router';
 import { HomeRoutingModule } from './home_route_module';
 import { CartStoreItem } from './services/cart/cart.storeitem';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UsersServicesService } from './componets/users/users-services.service';
 
 
 
@@ -21,6 +22,6 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [],
   imports: [CommonModule,FontAwesomeModule,HeaderComponent,
     CatnavigationComponent,SidenavgationbarComponent,SharedModule,RouterModule,HomeRoutingModule,ReactiveFormsModule],
-  providers :[CategoryService,CategoriesStoreItem,ProductsStoreItem,ProductsService,CartStoreItem]
+  providers :[CategoryService,CategoriesStoreItem,ProductsStoreItem,ProductsService,CartStoreItem,UsersServicesService]
 })
 export class HomeModule { }
