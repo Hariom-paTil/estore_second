@@ -2,8 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { loginToken } from '../../../types/cart.type';
+import { loginToken } from '../../../types/user.type';
 import { UsersServicesService } from '../users-services.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-user-loginform',
@@ -17,7 +18,11 @@ export class UserLoginformComponent implements OnInit {
   alertType: number = 0;
   alertMessage: string = '';
 
-  constructor(private fb: FormBuilder, private userService: UsersServicesService) {}
+  constructor(
+    private fb: FormBuilder,
+    private userService: UsersServicesService,
+    private location: Location
+  ) {}
 
   ngOnInit(): void {
     this.userLoginForm = this.fb.group({
@@ -40,6 +45,9 @@ export class UserLoginformComponent implements OnInit {
         this.userService.activateToken(result);
         this.alertType = 0;
         this.alertMessage = 'Login successful';
+        setTimeout(() => {
+          this.location.back();
+        }, 1000);
       },
       error: (error) => {
         this.alertType = 2;
