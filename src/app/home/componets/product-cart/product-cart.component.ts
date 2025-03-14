@@ -37,6 +37,7 @@ export class ProductCartComponent  implements OnDestroy,OnDestroy{
       city: '',
       state: '',
       pin: '',
+      email: ''
     };
     this.subscriptions.add(
       userService.loggedInUser$.subscribe((loggedUser) => {
