@@ -3,13 +3,13 @@ import { CategoryService } from '../../services/category.service';
 import { Category } from '../../types/category.type';
 import { CommonModule } from '@angular/common';
 import { CategoriesStoreItem } from '../../services/categoryStoreItem';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-catnavigation',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
   templateUrl: './catnavigation.component.html',
   styleUrl: './catnavigation.component.scss'
 })
