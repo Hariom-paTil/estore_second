@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { CartStoreItem } from '../cart/cart.storeitem';
 import { UsersServicesService } from '../../componets/users/users-services.service';
 import { DeliveryAddress } from '../../types/cart.type';
-import { Order, OrderItem } from '../../types/order.type';
+import { Order, OrderItem, PastOrder, PastOrderProduct } from '../../types/order.type';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -14,7 +14,7 @@ export class OrderService {
     private httpClient: HttpClient,
     private cartStore: CartStoreItem,
     private userservice: UsersServicesService
-  ) {}
+  ) { }
 
   saveOrder(
     deliveryAddress: DeliveryAddress,
@@ -43,6 +43,21 @@ export class OrderService {
       orderDetails: orderDetails,
     };
     return this.httpClient.post(url, order, {
+      headers: { authorization: this.userservice.token },
+    });
+  }
+  getOrders(userEmail: string): Observable<PastOrder[]> {
+    const url: string = `http://localhost:5001/orders/allorders?userEmail=${userEmail}`;
+
+    return this.httpClient.get<PastOrder[]>(url, {
+      headers: { authorization: this.userservice.token },
+    });
+  }
+
+  getOrderProducts(orderId: string): Observable<PastOrderProduct[]> {
+    const url: string = `http://localhost:5001/orders/orderproducts?orderId=${orderId}`;
+
+    return this.httpClient.get<PastOrderProduct[]>(url, {
       headers: { authorization: this.userservice.token },
     });
   }

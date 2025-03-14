@@ -6,6 +6,7 @@ import { ProductdetailsComponent } from './componets/productdetails/productdetai
 import { ProductCartComponent } from './componets/product-cart/product-cart.component';
 import { UserSignupComponent } from './componets/users/user-signup/user-signup.component';
 import { UserLoginformComponent } from './componets/users/user-loginform/user-loginform.component';
+import { PastorderComponent } from './componets/pastorder/pastorder.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path: 'login',
         component: UserLoginformComponent
+      },
+      {
+        path: 'pastorder',
+        component: PastorderComponent
       }
     ],
   }
