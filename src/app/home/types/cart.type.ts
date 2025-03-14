@@ -12,7 +12,3 @@ export interface Cart {
   totalAmount: number;
   totalProducts: number;
 }
-export interface loginToken {
-  token: string;
-  expiresInSeconds: number;
-}
