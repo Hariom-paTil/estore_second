@@ -7,6 +7,7 @@ import { ProductCartComponent } from './componets/product-cart/product-cart.comp
 import { UserSignupComponent } from './componets/users/user-signup/user-signup.component';
 import { UserLoginformComponent } from './componets/users/user-loginform/user-loginform.component';
 import { PastorderComponent } from './componets/pastorder/pastorder.component';
+import { authGuard } from './services/authguard';
 
 const routes: Routes = [
   {
@@ -35,7 +36,8 @@ const routes: Routes = [
       },
       {
         path: 'pastorder',
-        component: PastorderComponent
+        component: PastorderComponent,
+        canActivate :[authGuard]
       }
     ],
   }

@@ -39,6 +39,11 @@ export class UsersServicesService {
     return this.authToken;
   }
 
+  get loggedInUser(): loggedInUser {
+    return this.loggedInUserInfo.value;
+  }
+
+
   createUser(user: user): Observable<any> {
     const url: string = 'http://localhost:5001/users/signup';
     return this.httpClient.post(url, user);

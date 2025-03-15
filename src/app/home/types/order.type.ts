@@ -24,6 +24,7 @@ export interface OrderItem {
     pin: string;
     total: number;
     orderDate: string;
+    orderId: number;
   }
   
   export interface PastOrderProduct {
