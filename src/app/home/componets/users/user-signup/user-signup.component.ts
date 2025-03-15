@@ -15,7 +15,7 @@ import { user } from '../../../types/user.type';
 export class UserSignupComponent implements OnInit {
   userSignupForm: FormGroup;
   alertMessage: string = '';
-  alertType: number = 0; // 0-success, 1-warning, 2-error
+  alertType: number = 0; 
 
   constructor(private fb: FormBuilder, private userService: UsersServicesService) {}
 

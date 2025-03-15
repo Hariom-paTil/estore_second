@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { loggedInUser} from '../../types/user.type';
+import { loggedInUser } from '../../types/user.type';
 import { loginToken } from '../../types/user.type';
 import { user } from '../../types/user.type';
 
 @Injectable({
   providedIn: 'root'
-})
+})  
 export class UsersServicesService {
   private autoLogoutTimer: any;
   private authToken: string;
@@ -61,7 +61,7 @@ export class UsersServicesService {
     localStorage.setItem('city', token.user.city);
     localStorage.setItem('state', token.user.state);
     localStorage.setItem('pin', token.user.pin);
-    localStorage.setItem('email',token.user.email);
+    localStorage.setItem('email', token.user.email);
 
     this.isAuthenticated.next(true);
     this.loggedInUserInfo.next(token.user);

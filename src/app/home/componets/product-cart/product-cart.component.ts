@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CartItem, DeliveryAddress } from '../../types/cart.type';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { CartStoreItem } from '../../services/cart/cart.storeitem';
@@ -19,7 +19,7 @@ import { OrderService } from '../../services/order/order.service';
   templateUrl: './product-cart.component.html',
   styleUrl: './product-cart.component.scss'
 })
-export class ProductCartComponent  implements OnDestroy,OnDestroy{
+export class ProductCartComponent  implements OnInit,OnDestroy{
   orderForm: FormGroup;
   faTrash = faTrash;
   user: loggedInUser;
