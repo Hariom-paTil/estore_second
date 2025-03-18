@@ -18,7 +18,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 })
 export class ProductsComponent {
   faShoppingCart = faShoppingCart;
-
+ text: string ="Add To Cart";
+count: boolean =false;
+change: {[Productid:number]: boolean}={};
   constructor(
     public productsStore: ProductsStoreItem,
     private cart: CartStoreItem
@@ -26,6 +28,11 @@ export class ProductsComponent {
 
   addToCart(product: Product) {
     this.cart.addProduct(product);
+    this.change[product.id]=true;
   }
   
+ 
+  
 }
+
+

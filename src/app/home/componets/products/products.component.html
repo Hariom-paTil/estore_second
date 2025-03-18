@@ -22,7 +22,7 @@
             <fa-icon [icon]="faShoppingCart"></fa-icon>
           </div>
           <div class="cart-text-container mx-3">
-            <p>Add to Cart</p>
+            <p><button (click)="addToCart(product)">{{change[product.id]?'GO TO CART':'ADD TO CART'}}</button></p>
           </div>
         </div>
       </div>

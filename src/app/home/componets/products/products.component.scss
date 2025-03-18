@@ -83,3 +83,16 @@ a {
         color: black;
     }
 }
+
+.cart-text-container button {
+    background: none;
+    border: none;
+    color: #333; // Adjust color to match the design
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .cart-text-container button:focus {
+    outline: none;
+  }
