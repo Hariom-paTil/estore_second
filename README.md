@@ -1,4 +1,4 @@
-# 🛒 eStore Application
+ eStore Application
 
 An eCommerce platform built with Angular 17 frontend, Node.js backend, and MySQL database.
 
@@ -22,30 +22,24 @@ Before running the project, ensure you have the following installed:
 ---
 
 ## 🛠️ Installation
-> 📎 **Clone URL:**  
-> [](https://github.com/Hariom-paTil/estore_second.git)
+> 📌 **Clone URL:**  
+> [https://github.com/Hariom-paTil/estore_second.git](https://github.com/Hariom-paTil/estore_second.git)
 
-1. Create a main folder (e.g., "Estore_project" ) and inside it, create two folders:
+1. Create a main folder (e.g., "Estore_project") and inside it, create two folders:
    - frontend
    - backend
 
 2. Open **frontend** folder in VS Code, then open terminal and run:
-a. git clone https://github.com/Hariom-paTil/estore_second.git
-b. git checkout master
-c. npm install
+   - `git clone https://github.com/Hariom-paTil/estore_second.git`
+   - `git checkout master`
+   - `npm install`
 
-3. Now open backend folder in VS Code, then run:
-a. git clone https://github.com/Hariom-paTil/estore_second.git
-b. git checkout main
+3. Now open **backend** folder in VS Code, then run:
+   - `git clone https://github.com/Hariom-paTil/estore_second.git`
+   - `git checkout main`
 
-4. Open the integrated terminal in the backend folder and start the server using command:
-a. nodemon index.js
+4. Open the integrated terminal in the **backend** folder and start the server using command:
+   - `nodemon index.js`
 
-5. Go to the frontend folder terminal and run:
-a. ng serve
-
-
-
-
-
-
+5. Go to the **frontend** folder terminal and run:
+   - `ng serve`
