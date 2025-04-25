@@ -48,6 +48,7 @@ Before running the project, ensure you have the following installed:
 
 ## 🗃️ Required Table Structure and Data
 
+ - `The file TableInfo.txt located in the main branch of the repository contains the full SQL table structure and data for the application.`
 
 
 
