@@ -30,19 +30,19 @@ Before running the project, ensure you have the following installed:
    - backend
 
 2. Open **frontend** folder in VS Code, then open terminal and run:
-git clone https://github.com/Hariom-paTil/estore_second.git
-git checkout master
-npm install
+a. git clone https://github.com/Hariom-paTil/estore_second.git
+b. git checkout master
+c. npm install
 
 3. Now open backend folder in VS Code, then run:
-git clone https://github.com/Hariom-paTil/estore_second.git
-git checkout main
+a. git clone https://github.com/Hariom-paTil/estore_second.git
+b. git checkout main
 
 4. Open the integrated terminal in the backend folder and start the server using command:
-nodemon index.js
+a. nodemon index.js
 
 5. Go to the frontend folder terminal and run:
-ng serve
+a. ng serve
 
 
 
