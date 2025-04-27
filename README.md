@@ -25,24 +25,25 @@ Before running the project, ensure you have the following installed:
 > 📌 **Clone URL:**  
 > [https://github.com/Hariom-paTil/estore_second.git](https://github.com/Hariom-paTil/estore_second.git)
 
-1. Create a main folder (e.g., "Estore_project") and inside it, create two folders:
-   - frontend
-   - backend
+1. Create a main folder (e.g., "Estore_project") and inside it, create two folders: **frontend** and **backend**.
 
-2. Open **frontend** folder in VS Code, then open terminal and run:
-   - `git clone https://github.com/Hariom-paTil/estore_second.git`
-   - `git checkout master`
-   - `npm install`
+2. Open a terminal and follow these steps:
 
-3. Now open **backend** folder in VS Code, then run:
-   - `git clone https://github.com/Hariom-paTil/estore_second.git`
-   - `git checkout main`
+   ```bash
+   # Frontend setup
+   git clone https://github.com/Hariom-paTil/estore_second.git
+   git checkout master
+   git pull origin master
+   npm install --force
 
-4. Open the integrated terminal in the **backend** folder and start the server using command:
-   - `nodemon index.js`
+   # Backend setup
+   git clone https://github.com/Hariom-paTil/estore_second.git
+   git checkout main
+   git pull origin main
+   npm install --force
 
-5. Go to the **frontend** folder terminal and run:
-   - `ng serve`
+   # Run the application
+   ng serve
 
 ---
 
