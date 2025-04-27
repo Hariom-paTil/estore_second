@@ -43,7 +43,8 @@ Before running the project, ensure you have the following installed:
    npm install --force
 
    # Run the application
-   ng serve
+   Frontend :- ng serve
+   Backend  :- nodemon.index.js
 
 ---
 
