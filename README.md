@@ -48,7 +48,9 @@ Before running the project, ensure you have the following installed:
 
 ## 🗃️ Required Table Structure and Data
 
- - `The file TableInfo.txt located in the main branch of the repository contains the full SQL table structure and data for the application.`
+ - `1.Note: "First, create a schema named estore in the database. After that, create the tables inside the estore schema."
+ -  2.Note: 
+ -  `The file TableInfo.txt located in the main branch of the repository contains the full SQL table structure and data with query for the application.`
 
 
 
