@@ -50,11 +50,14 @@ Before running the project, ensure you have the following installed:
 
 ## 🗃️ Required Table Structure and Data
 
- - `1.Note: "First, create a schema named estore in the database. After that, create the tables inside the estore schema."`
-   
- - `2.Note: "Check the pool.js file inside the shared folder in the main branch and update the database name, password, and port number according to your own database."`
- > 🛠 Example `pool.js` configuration:
--pool.js
+1. Note: "First, create a schema named estore in the database. After that, create the tables inside the estore schema."
+
+
+2. Note: Check the `pool.js` file inside the shared folder in the main branch and update the database name, password, and port number according to your own database.
+
+🛠 Example `pool.js` configuration:
+
+```js
 const pool = mysql.createPool({
   host: 'localhost',       // Change if your MySQL server is hosted elsewhere
   user: 'root',            // Your MySQL username
@@ -63,9 +66,7 @@ const pool = mysql.createPool({
   port: 3306,              // Change if using a non-default MySQL port
   multipleStatements: true // Allows executing multiple SQL queries at once
 });
-
- -  `The file TableInfo.txt located in the main branch of the repository contains the full SQL table structure and data with query for the application.`
-
+```
 ---
 
 ## 📹 Has Requirement
