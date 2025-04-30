@@ -53,8 +53,8 @@ Before running the project, ensure you have the following installed:
  - `1.Note: "First, create a schema named estore in the database. After that, create the tables inside the estore schema."`
    
  - `2.Note: "Check the pool.js file inside the shared folder in the main branch and update the database name, password, and port number according to your own database."`
- - > 🛠 Example `pool.js` configuration:
-```js
+ > 🛠 Example `pool.js` configuration:
+-pool.js
 const pool = mysql.createPool({
   host: 'localhost',       // Change if your MySQL server is hosted elsewhere
   user: 'root',            // Your MySQL username
