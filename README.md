@@ -54,5 +54,19 @@ Before running the project, ensure you have the following installed:
  -  2.Note: "Check the index.js file in the main branch and update the database name, password, and port number according to your own database."
  -  `The file TableInfo.txt located in the main branch of the repository contains the full SQL table structure and data with query for the application.`
 
+---
+
+## 📹 Has Requirement
+
+📌 Watch Setup Tutorials:
+
+- How to Install Node.js :- https://www.youtube.com/watch?v=a0Byn77f5gM
+
+- How to Install Angular 17 :- https://www.youtube.com/watch?v=M9yXHW08Lws
+  
+- How to Install MySQL Workbench :- https://www.youtube.com/watch?v=hiS_mWZmmI0
+
+
+
 
 
