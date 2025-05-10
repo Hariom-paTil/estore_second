@@ -67,6 +67,7 @@ const pool = mysql.createPool({
   multipleStatements: true // Allows executing multiple SQL queries at once
 });
 ```
+3. Note: The TableInfo.txt file located in the main branch of the repository contains the full SQL table structure and data with query for the application.
 ---
 
 ## 📹 Has Requirement
