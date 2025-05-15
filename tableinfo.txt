@@ -26,16 +26,7 @@ CREATE TABLE estore.order_items (
     FOREIGN KEY (productId) REFERENCES estore.products(id)
 );
 
-INSERT INTO estore.order_items (orderId, productId, qty, price, amount) VALUES
-(1, 3, 1, 45, 45),
-(1, 2, 1, 25, 25),
-(2, 2, 1, 25, 25),
-(2, 1, 3, 100, 300),
-(3, 1, 12, 100, 1200),
-(3, 2, 2, 25, 50),
-(3, 3, 2, 45, 90),
-(4, 1, 2, 100, 200),
-(5, 1, 1, 100, 400);
+
 
 -- 3. Orders Table:
 CREATE TABLE estore.orders (
@@ -51,17 +42,6 @@ CREATE TABLE estore.orders (
     FOREIGN KEY (userId) REFERENCES estore.users(id)
 );
 
-INSERT INTO estore.orders (orderId, orderDate, userName, address, city, state, pin, total, userId) VALUES
-(1, '2025-03-14 17:10:33', 'Hariom Sharma', 'Maratha Galli, Varche Gaav', 'Shirpur', 'Maharashtra', '425405', 70, 2),
-(2, '2025-03-16 12:47:08', 'Anjali Deshpande', '12/A Gandhi Road', 'Pune', 'Maharashtra', '411001', 450, 3),
-(3, '2025-03-18 14:22:10', 'Rahul Jain', 'Silver Oaks Apt, Lane 5', 'Mumbai', 'Maharashtra', '400001', 890, 5),
-(4, '2025-03-20 11:05:33', 'Neha Gupta', '24 Park Street', 'Nagpur', 'Maharashtra', '440002', 275, 1),
-(5, '2025-03-22 16:40:18', 'Vikram Singh', 'Green Valley Society', 'Nashik', 'Maharashtra', '422101', 620, 6),
-(6, '2025-03-25 19:15:27', 'Priya Reddy', '7 Hills Colony', 'Hyderabad', 'Telangana', '500032', 380, 7),
-(7, '2025-03-28 09:30:45', 'Amit Patel', 'Shivaji Nagar, Flat 302', 'Aurangabad', 'Maharashtra', '431001', 210, 8),
-(8, '2025-04-02 13:45:12', 'Sneha Iyer', 'Ocean View Apartments', 'Thane', 'Maharashtra', '400601', 530, 9),
-(9, '2025-04-08 18:20:39', 'Rajesh Kumar', '15 MG Road', 'Bangalore', 'Karnataka', '560001', 720, 10),
-(10, '2025-04-14 14:12:19', 'Meera Choudhary', 'Rose Cottage, Lane 3', 'Goa', 'Goa', '403001', 150, 11);
 
 -- 4. Products Table:
 CREATE TABLE estore.products (
