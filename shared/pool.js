@@ -2,11 +2,11 @@ const mysql = require('mysql2');
 
 
 const pool = mysql.createPool({
-  host: 'localhost',
+     host: 'switchyard.proxy.rlwy.net',
   user: 'root',
-  password: '121905',
-  database: 'estore',
-  port: 3306,
+  password: 'JtfSAHomPkvIbioCJmayMGVPPjeyltON',
+  database: 'railway',
+  port: 20974,
   multipleStatements: true,
 });
 
