@@ -1,0 +1,88 @@
+-- 1. Categories Table:
+CREATE TABLE estore.categories (
+    id INT NOT NULL PRIMARY KEY,
+    category VARCHAR(45),
+    parent_category_id INT
+);
+
+INSERT INTO estore.categories (id, category, parent_category_id) VALUES
+(1, 'Men', NULL),
+(2, 'Women', NULL),
+(3, 'Kids', NULL),
+(4, 'Casual Wear', 1),
+(5, 'Party Wear', 2),
+(6, 'Foot Wear', 2),
+(7, 'Accessories', 3);
+
+-- 2. OrderItems Table (junction table for orders and products):
+CREATE TABLE estore.order_items (
+    orderId INT NOT NULL,
+    productId INT,
+    qty INT,
+    price DECIMAL(10,0),
+    amount DECIMAL(10,0),
+    PRIMARY KEY (orderId, productId),
+    FOREIGN KEY (orderId) REFERENCES estore.orders(orderId),
+    FOREIGN KEY (productId) REFERENCES estore.products(id)
+);
+
+
+
+-- 3. Orders Table:
+CREATE TABLE estore.orders (
+    orderId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    orderDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+    userName VARCHAR(100),
+    address VARCHAR(200),
+    city VARCHAR(45),
+    state VARCHAR(45),
+    pin VARCHAR(10),
+    total DECIMAL(10,0),
+    userId INT,
+    FOREIGN KEY (userId) REFERENCES estore.users(id)
+);
+
+
+-- 4. Products Table:
+CREATE TABLE estore.products (
+    id INT NOT NULL PRIMARY KEY,
+    product_name VARCHAR(45),
+    product_description VARCHAR(100),
+    price DECIMAL(10,0),
+    ratings INT,
+    category_id INT,
+    product_img VARCHAR(45),
+    keywords VARCHAR(200),
+    FOREIGN KEY (category_id) REFERENCES estore.categories(id)
+);
+
+INSERT INTO estore.products (id, product_name, product_description, price, ratings, category_id, product_img, keywords) VALUES
+(1, 'Jacket', 'Jacket description goes here', 100, 5, 5, 'shop-1.jpg', 'jacket,woolen,black'),
+(2, 'Purse', 'Very nice purse', 25, 3, 7, 'shop-2.jpg', 'bag,purse,leather,black'),
+(3, 'Dress', 'Nice Party Dress', 45, 4, 5, 'shop-3.jpg', 'dress,party,frock'),
+(4, 'Denim Jeans', 'Denim Jeans', 50, 4, 4, 'shop-4.jpg', 'denim,jeans,casual,pant'),
+(5, 'Laced Boots', 'Premium leather boots', 65, 4, 6, 'shop-5.jpg', 'boots,laced,yellow'),
+(6, 'Back pack', 'Spacious back pack', 20, 5, 7, 'shop-6.jpg', 'leather,black,bag'),
+(7, 'Ear rings', 'Beautiful ear rings', 10, 4, 7, 'shop-7.jpg', 'ear_rings,blue,golden'),
+(8, 'Scarf', 'Matching scarf', 30, 4, 7, 'shop-8.jpg', 'scarf,chocolate,party'),
+(9, 'Boots', 'Black leather boots', 70, 4, 6, 'shop-9.jpg', 'leather,black,boots');
+
+-- 5. Users Table:
+CREATE TABLE estore.users (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(45) NOT NULL,
+    firstName VARCHAR(45),
+    lastName VARCHAR(45),
+    address VARCHAR(200),
+    city VARCHAR(45),
+    state VARCHAR(45),
+    pin VARCHAR(10),
+    password VARCHAR(500)
+);
+
+INSERT INTO estore.users (id, email, firstName, lastName, address, city, state, pin, password) VALUES
+(1, 'alice.johnson@example.com', 'Alice', 'Johnson', '123 Maple Street', 'Boston', 'MA', '02108', '$2b$10$8Sh3v4g83Gy/owyDpjNta.OXTYKLCWk92jUFptm.9iYZ3X.4.84fu'),
+(2, 'robert.williams@example.com', 'Robert', 'Williams', '456 Oak Avenue', 'Chicago', 'IL', '60601', '$2b$10$1YKnDTChTpjl3UsliywYPe2TOc2md0JqnU3DR7zBRr0zmLPDU1tAy'),
+(3, 'emily.chen@example.com', 'Emily', 'Chen', '789 Pine Road', 'San Francisco', 'CA', '94102', '$2b$10$syyz4YgUFXZPNhetmmWmAu84d2L6.OAxLSO6CT6QgOZzhM.WZcP/.'),
+(4, 'michael.brown@example.com', 'Michael', 'Brown', '321 Elm Drive', 'Austin', 'TX', '73301', '$2b$10$VTZmrit9a0r8k24htcDyDuCb7h462zZpJORgwweorgWlex67fa0Z.'),
+(5, 'sarah.davis@example.com', 'Sarah', 'Davis', '654 Birch Lane', 'Seattle', 'WA', '98101', '$2b$10$LkP9q3FzRQ2WYVhD5uX0UeJf8kKlPZwTjH7sNn6mYv');
