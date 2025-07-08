@@ -1,27 +1,56 @@
-# Estore
+# 🛒 eStore Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+An eCommerce platform built with Angular 17 frontend, Node.js backend, and MySQL database.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🧰 Technology Stack
+- **Frontend**: Angular 17
+- **Backend**: Node.js 18.20.5
+- **Database**: MySQL Workbench 8.0
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## ✅ Prerequisites
+Before running the project, ensure you have the following installed:
+- **Node.js** (v18.20.5 or compatible)
+- **Angular CLI** (latest version)
+- **MySQL Workbench** (8.0 or compatible)
+- **Git** (for cloning the repository)
+- **Nodemon** (install globally with `npm install -g nodemon`)
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🛠️ Installation
+> 📌 **Clone URL:**  
+> [https://github.com/Hariom-paTil/estore_second.git](https://github.com/Hariom-paTil/estore_second.git)
 
-## Running unit tests
+1. Create a main folder (e.g., "Estore_project") and inside it, create two folders:
+   - frontend
+   - backend
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Open **frontend** folder in VS Code, then open terminal and run:
+   - `git clone https://github.com/Hariom-paTil/estore_second.git`
+   - `git checkout master`
+   - `npm install`
 
-## Running end-to-end tests
+3. Now open **backend** folder in VS Code, then run:
+   - `git clone https://github.com/Hariom-paTil/estore_second.git`
+   - `git checkout main`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. Open the integrated terminal in the **backend** folder and start the server using command:
+   - `nodemon index.js`
 
-## Further help
+5. Go to the **frontend** folder terminal and run:
+   - `ng serve`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+## 🗃️ Required Table Structure and Data
+
+ - `1.Note: "First, create a schema named estore in the database. After that, create the tables inside the estore schema."
+ -  2.Note: "Check the index.js file in the main branch and update the database name, password, and port number according to your own database."
+ -  `The file TableInfo.txt located in the main branch of the repository contains the full SQL table structure and data with query for the application.`
+
+
+
